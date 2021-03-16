@@ -16,6 +16,18 @@ import {NativeEventEmitter, NativeModules} from 'react-native';
 
 import {AlanView} from './AlanSDK.js';
 
+import {
+  BallIndicator,
+  BarIndicator,
+  DotIndicator,
+  MaterialIndicator,
+  PacmanIndicator,
+  PulseIndicator,
+  SkypeIndicator,
+  UIActivityIndicator,
+  WaveIndicator,
+} from 'react-native-indicators';
+
 const {AlanManager, AlanEventEmitter} = NativeModules;
 const alanEventEmitter = new NativeEventEmitter(AlanEventEmitter);
 
@@ -39,8 +51,8 @@ const [authDataValue,setAuthDataValue] = useState('test auth data')
  
 return (
 <View style ={styles.container}>
- <Image source={require('./assets/center.jpg')}
-      />
+ <Image source={require('./assets/center.jpg')} style={{position:'absolute',top:'25%',resizeMode:'contain'}}/>
+      <BarIndicator color='#c7c7c7'  style={{position:'absolute',top:'50%'}} />
         <AlanView
           projectid={
             '9f230096bc8fef2aaeafe86795455deb2e956eca572e1d8b807a3e2338fdd0dc/stage'
@@ -58,7 +70,6 @@ return (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems:'center',
     backgroundColor: '#0C1A27',
    

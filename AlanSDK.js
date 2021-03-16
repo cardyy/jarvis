@@ -44,9 +44,22 @@ AlanButton.propTypes = {
 
 var RNTAlanButton = requireNativeComponent('RNTAlanButton', AlanButton);
 
+
+
 class AlanView extends React.Component {
   render() {
-    return <AlanButton params={[this.props.projectid, this.props.host, this.props.authData, '1.1.0']}/>;
+    return <View style={styles.bottomView}>
+       
+        <AlanButton
+          style={styles.buttonView}
+          params={[
+            this.props.projectid,
+            this.props.host,
+            this.props.authData,
+            '1.0.6',
+          ]}
+        />
+      </View>;
   }
 }
 
