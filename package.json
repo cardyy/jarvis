@@ -13,7 +13,8 @@
     "@alan-ai/alan-sdk-react-native": "^1.2.0",
     "react": "17.0.1",
     "react-native": "0.64.0",
-    "react-native-indicators": "^0.17.0"
+    "react-native-indicators": "^0.17.0",
+    "react-native-swiper-flatlist": "^3.0.14"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
